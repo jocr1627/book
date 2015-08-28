@@ -6,10 +6,10 @@ for making the decision.
 
 From the class discussion, we wrote down five specific questions that are particularly interesting.
 
-* ((question))
-* ((question))
-* ((question))
-* ((question))
-* ((question))
+* How many total pushes on Github a given language?
+* How many pushes per repository for a given language?
+* How many forks per repository for a given language?
+* How many stars per repostiory for a given language?
+* How many watchers per repository for a given language?
 
 From the above list, my team chose a question, worked on it, and created a report on the next page.

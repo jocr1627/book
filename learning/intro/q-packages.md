@@ -2,24 +2,55 @@
 
 ## Data
 
-* Manually collect data from online resources
-
-((Markdown table))
+| Language | # of Active Github Repositories |
+| -- | -- |
+| JavaScript | 323,938 |
+| Java | 222,852 |
+| Python | 164,852 |
+| CSS | 164,585 |
+| PHP | 138,771 |
 
 ## Top five
 
 {% svg %}
 
-<!-- barchart with five bars -->
-<rect x="0" width="20" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+</style>
+<svg class="chart" width="420" height="120">
+  <g transform="translate(0,0)">
+    <rect width="43" height="19"></rect>
+  </g>
+  <g transform="translate(0,20)">
+    <rect width="51" height="19"></rect>
+  </g>
+  <g transform="translate(0,40)">
+    <rect width="51" height="19"></rect>
+  </g>
+  <g transform="translate(0,60)">
+    <rect width="69" height="19"></rect>
+  </g>
+  <g transform="translate(0,80)">
+    <rect width="100" height="19"></rect>
+  </g>
+</svg>
 
 {% endsvg %}
 
 ## Top one
 
 {% svg %}
-
-<!-- same barchart, but the top is highlighted, using css -->
-<rect x="0" width="20" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-
+<svg class="chart" width="420" height="120">
+  <g transform="translate(0,0)">
+    <rect width="100" height="19"></rect>
+  </g>
+</svg>
 {% endsvg %}
