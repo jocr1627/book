@@ -46,7 +46,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2.4" data-basepath="../.." data-revision="Mon Aug 31 2015 18:18:51 GMT-0600 (Mountain Daylight Time)">
+    <div class="book" data-level="2.2.4" data-basepath="../.." data-revision="Fri Sep 04 2015 19:08:19 GMT-0600 (Mountain Daylight Time)">
     
 
 <div class="book-summary">
@@ -491,22 +491,48 @@
 <p>As a class, we brainstormed and came up with a long list of further questions we can ask based
 on the &quot;self-introduction&quot; data. Out of these questions, our team chose to tackle on
 the following:</p>
-<h1 id="-question-1">(Question 1)</h1>
+<h1 id="how-many-applied-math-majors-are-there-in-the-class">How many applied math majors are there in the class?</h1>
 <p><pre>
-<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
+<span class="keyword">return</span> _.size(_.filter(_.pluck(data.comments, <span class="string">&apos;body&apos;</span>), <span class="keyword">function</span>(comment) {
+    <span class="keyword">if</span> (_.includes(comment.toLowerCase(), <span class="string">&apos;applied math&apos;</span>)) {
+        <span class="keyword">return</span> <span class="keyword">true</span>
+    } <span class="keyword">else</span> {
+        <span class="keyword">return</span> <span class="keyword">false</span>
+    }
+}))
 </pre></p>
-<h1 id="-question-2">(Question 2)</h1>
+<p>There are 3 applied math majors.</p>
+<h1 id="how-many-students-submitted-after-the-first-day-of-class">How many students submitted after the first day of class?</h1>
 <p><pre>
-<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
+<span class="keyword">return</span> _.size(_.filter(_.pluck(data.comments, <span class="string">&apos;created_at&apos;</span>), <span class="keyword">function</span>(comment) {
+    <span class="keyword">if</span> (comment.split(<span class="string">&apos;T&apos;</span>)[<span class="number">0</span>].split(<span class="string">&apos;-&apos;</span>)[<span class="number">2</span>] &gt; <span class="number">24</span>) {
+        <span class="keyword">return</span> <span class="keyword">true</span>
+    } <span class="keyword">else</span> {
+        <span class="keyword">return</span> <span class="keyword">false</span>
+    }
+}))
 </pre></p>
-<h1 id="-question-3">(Question 3)</h1>
+<p>There were 5 submissions after the first day of class.</p>
+<h1 id="who-was-the-first-person-to-submit-sushi-as-their-favorite-food">Who was the first person to submit Sushi as their favorite food?</h1>
 <p><pre>
-<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
+<span class="keyword">var</span> sushiComment = _.find(_.pluck(data.comments, <span class="string">&apos;body&apos;</span>), <span class="keyword">function</span>(comment) {
+    <span class="keyword">return</span> _.includes(comment.toLowerCase(), <span class="string">&apos;sushi&apos;</span>)
+})
+
+<span class="keyword">return</span> sushiComment.toLowerCase().split(<span class="string">&apos;name:&apos;</span>)[<span class="number">1</span>].split(<span class="string">&apos;\r\n&apos;</span>)[<span class="number">0</span>].trim()
 </pre></p>
-<h1 id="-question-4">(Question 4)</h1>
+<p>william farmer was the first person to submit &quot;Sushi&quot; as their favorite food.</p>
+<h1 id="how-many-people-submitted-before-noon-overall">How many people submitted before noon overall?</h1>
 <p><pre>
-<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
+<span class="keyword">return</span> _.size(_.filter(_.pluck(data.comments, <span class="string">&apos;created_at&apos;</span>), <span class="keyword">function</span>(comment) {
+    <span class="keyword">if</span> (comment.split(<span class="string">&apos;T&apos;</span>)[<span class="number">1</span>].split(<span class="string">&apos;:&apos;</span>)[<span class="number">0</span>] &lt; <span class="number">12</span>) {
+        <span class="keyword">return</span> <span class="keyword">true</span>
+    } <span class="keyword">else</span> {
+        <span class="keyword">return</span> <span class="keyword">false</span>
+    }
+}))
 </pre></p>
+<p>There were 6 submissions made before noon on their day of submission.</p>
 
                     
                     </section>
