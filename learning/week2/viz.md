@@ -17,30 +17,36 @@ including the controls, widgets ...etc.
 
 # How big the deal Tableau really is?
 
-(write your answer based on the statistics you can find online)
+"During the second quarter, Tableau reported international revenue of
+$36.7 million, an 83 percent growth rate over the same period last year.
+Total revenue at the company was up 67 percent."
 
-# (Question 1)
+-An excerpt from GeekWire on Tableau's 2015 revenue and growth.
+
+http://www.geekwire.com/2015/data-visualization-giant-tableau-opens-new-office-in-china/
+
+# How many students submitted after the first day of class?
+
+![q1screenshot](q1screenshot.png)
+
+(write your explanation for the reader as to where to look at this chart in order
+    to see the answer)
+
+# How many students submitted after the first day of class?
 
 ![screenshot](screenshot.png)
 
 (write your explanation for the reader as to where to look at this chart in order
     to see the answer)
 
-# (Question 2)
+# Who was the first person to submit Sushi as their favorite food?
 
 ![screenshot](screenshot.png)
 
 (write your explanation for the reader as to where to look at this chart in order
     to see the answer)
 
-# (Question 3)
-
-![screenshot](screenshot.png)
-
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
-
-# (Question 4)
+# How many people submitted before noon overall?
 
 ![screenshot](screenshot.png)
 
