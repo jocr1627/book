@@ -1,26 +1,39 @@
-{% data src="../../hackathons/fcq/fcq.clean.json" %}
+{% data src="fcq.clean.json" %}
 {% enddata %}
 
 # Report
 
-As a team, answer all the questions the team's members submitted on our
-[course forum](https://github.com/bigdatahci2015/forum/issues/14). Each
-team member is responsible for one question. But everyone should work together
-to come up with a good solution. Your answer should consist of Lodash code
-and a brief writeup. Utilize `_.map`, `_.filter`, `_.group` ...etc. Do not
-use any for loop.
+As a class, we brainstormed and came up with a long list of further questions we
+can ask based on the FCQ data. Out of these questions, our team chose to tackle on
+the following questions. Each member on our team is reponsible for one question.
 
-It is important for everyone to understand all the solutions and make sure you
-will be able to independently reproduce these solutions when asked to do so.
-Coming up, we will incorporate variations of these questions into a future hackathon
- and you are expected to be capable of reproducing and adapting your solutions.
-
-# (Question 1) by (Name)
+# What classes have very different workloads compared to credit hours?
 
 {% lodash %}
-return "[answer]"
+return _.filter(data, function(course) {
+	var thresh = 3
+	return ((course.Workload.Raw - course.Hours > thresh) ||
+	(course.Workload.Raw - course.Hours < -1*thresh) &&
+	course.Workload.Raw > 0)
+})
 {% endlodash %}
 
+<table>
+	<tr>
+		<td>Subject</td>
+		<td>Course Number</td>
+		<td>Hours</td>
+		<td>Workload</td>
+	</tr>
+{% for course in result %}
+    <tr>
+        <td>{{course.Subject}}</td>
+        <td>{{course.Course}}</td>
+		<td>{{course.Hours}}</td>
+        <td>{{course.Workload.Raw}}</td>
+    </tr>
+{% endfor %}
+</table>
 
 # (Question 2) by (Name)
 
