@@ -1,4 +1,4 @@
-{% data src="fcq.clean.json" %}
+{% data src="../../hackathons/fcq/fcq.clean.json" %}
 {% enddata %}
 
 # Report
